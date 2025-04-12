@@ -3,11 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Название страницы</title>
+    <meta name="description" content="Пример сложного HTML-документа">
+    <meta name="keywords" content="HTML, CSS, JavaScript, веб-разработка">
+    <meta name="author" content="Ваше Имя">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Усложнённый HTML-документ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #35424a;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+            background: #e8491d;
+            text-align: center;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        footer {
+            background: #35424a;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <!-- Содержимое страницы -->
-    <h1>Заголовок</h1>
-    <p>Абзац текста.</p>
+    <header>
+        <h1>Мой Сайт</h1>
+        <p>Добро пожаловать на мой усложнённый HTML-сайт!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>Главная</h2>
+            <article>
+                <h3>Статья 1</h3>
+                <p>Это пример статьи на главной странице. Здесь может быть текст, изображения и другие элементы.</p>
+                <img src="https://via.placeholder.com/400x200" alt="Пример изображения" width="400" height="200">
+            </article>
+        </section>
+
+        <section id="about">
+            <h2>О нас</h2>
+            <p>Мы — команда профессионалов, занимающихся веб-разработкой.</p>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React</li>
+            </ul>
+        </section>
+
+        <section id="services">
+            <h2>Услуги</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Услуга</th>
+                        <th>Описание</th>
+                        <th>Цена</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Вёрстка</td>
+                        <td>Адаптивная вёрстка сайтов</td>
+                        <td>от 10 000 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Дизайн</td>
+                        <td>UI/UX дизайн</td>
+                        <td>от 15 000 ₽</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>Контакты</h2>
+            <form action="/submit" method="POST">
+                <div>
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Мой Сайт. Все права защищены.</p>
+    </footer>
+
+    <script>
+        console.log("Страница загружена!");
+        document.querySelector('header').addEventListener('click', function() {
+            alert('Вы кликнули на шапку сайта!');
+        });
+    </script>
 </body>
 </html>
